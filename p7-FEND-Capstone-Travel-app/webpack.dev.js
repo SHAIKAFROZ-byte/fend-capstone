@@ -1,12 +1,12 @@
-const path = require('path');
-const webpack = require('webpack');
-const HTMLWebPackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const webpack = require("webpack");
+const HTMLWebPackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const WorkboxPlugin = require('workbox-webpack-plugin');
+const WorkboxPlugin = require("workbox-webpack-plugin");
 
 module.exports = {
   entry: './src/client/index.js',
-  mode: 'development',
+  mode: "development",
   module: {
     rules: [
       {
@@ -47,7 +47,7 @@ module.exports = {
     port: 8081, // Defaults to 8080
     proxy: {
       '^/api/*': {
-        target: 'http://localhost:8081/api/',
+        target: "http://localhost:8081/api/",
         secure: false
       }
     }
